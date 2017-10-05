@@ -1,0 +1,5 @@
+name: CFR
+type: module
+description: CFR code demo module.
+core: 8.x
+package: CFR

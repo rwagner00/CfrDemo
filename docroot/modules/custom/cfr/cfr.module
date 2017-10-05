@@ -1,0 +1,35 @@
+<?php
+
+/**
+ * @file
+ * Contains cfr.module.
+ */
+
+use Drupal\Core\Routing\RouteMatchInterface;
+
+/**
+ * Implements hook_help().
+ */
+function cfr_help($route_name, RouteMatchInterface $route_match) {
+  switch ($route_name) {
+    // Main module help for the cfr module.
+    case 'help.page.cfr':
+      $output = '';
+      $output .= '<h3>' . t('About') . '</h3>';
+      $output .= '<p>' . t('CFR code demo module.') . '</p>';
+      return $output;
+
+    default:
+  }
+}
+
+/**
+ * Implements hook_theme().
+ */
+function cfr_theme() {
+  return [
+    'cfr' => [
+      'render element' => 'children',
+    ],
+  ];
+}

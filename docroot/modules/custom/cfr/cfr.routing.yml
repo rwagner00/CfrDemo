@@ -1,0 +1,8 @@
+
+cfr.cfr_demo_controller_main:
+  path: '/cfr/demo'
+  defaults:
+    _controller: '\Drupal\cfr\Controller\CfrDemoController::main'
+    _title: 'main'
+  requirements:
+    _permission: 'access content'
