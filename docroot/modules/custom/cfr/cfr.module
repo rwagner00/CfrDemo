@@ -17,6 +17,7 @@ function cfr_help($route_name, RouteMatchInterface $route_match) {
       $output = '';
       $output .= '<h3>' . t('About') . '</h3>';
       $output .= '<p>' . t('CFR code demo module.') . '</p>';
+      $output .= '<p>' . t('This module provides the functionality detailed in the Web Developer Test document.') . '</p>';
       return $output;
 
     default:
@@ -28,8 +29,17 @@ function cfr_help($route_name, RouteMatchInterface $route_match) {
  */
 function cfr_theme() {
   return [
-    'cfr' => [
-      'render element' => 'children',
+    'cfr_station_list' => [
+        'template' => 'cfr_station_list',
+        'variables' => [
+            'items' => NULL,
+        ],
+    ],
+    'cfr_station_list_alternate' => [
+      'template' => 'cfr_station_list_alternate',
+      'variables' => [
+        'items' => NULL,
+      ],
     ],
   ];
 }

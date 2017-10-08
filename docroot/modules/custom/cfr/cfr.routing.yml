@@ -1,8 +1,14 @@
-
-cfr.cfr_demo_controller_main:
+cfr.demo_controller_main:
   path: '/cfr/demo'
   defaults:
-    _controller: '\Drupal\cfr\Controller\CfrDemoController::main'
-    _title: 'main'
+    _controller: '\Drupal\cfr\Controller\CfrDemoController::orFilter'
+    _title: 'CFR Web Developer Test Results'
+  requirements:
+    _permission: 'access content'
+cfr.demo_controller_alternate:
+  path: '/cfr/alternate'
+  defaults:
+    _controller: '\Drupal\cfr\Controller\CfrDemoController::allFilter'
+    _title: 'CFR Web Developer Alternate Results'
   requirements:
     _permission: 'access content'

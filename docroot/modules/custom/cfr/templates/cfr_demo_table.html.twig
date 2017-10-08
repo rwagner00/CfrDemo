@@ -1,0 +1,26 @@
+<table id="cfr-station-table" class="cfr-station-demo">
+    <thead>
+    <tr>
+        <th>Station Name</th>
+        <th>Available Docks</th>
+        <th>Status</th>
+        <th>Available Bikes</th>
+        <th>Street Address</th>
+    </tr>
+    </thead>
+    <tbody>
+    {% for item in items %}
+        <tr>
+            <td>{{ item.stationName }}</td>
+            <td>{{ item.availableDocks }}</td>
+            <td>{{ item.statusValue }}</td>
+            <td>{{ item.availableBikes }}</td>
+            <td>{{ item.stAddress1 }} </td>
+        </tr>
+    {% else %}
+        <tr>
+            <td>No results were found.</td>
+        </tr>
+    {% endfor %}
+    </tbody>
+</table>

@@ -1,0 +1,10 @@
+cfr-demo:
+  version: 1.x
+  css:
+    component:
+      css/datatables.min.css: {}
+  js:
+    js/datatables.min.js: {}
+    js/cfr-demo.js: {}
+  dependencies:
+    - core/jquery

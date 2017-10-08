@@ -1,0 +1,6 @@
+{{ attach_library('cfr/cfr-demo') }}
+
+<p>To return to the primary results page, click <a href="{{ url('cfr.demo_controller_main') }}">Here.</a></p>
+
+{# Table used as partial to avoid code duplication or excess logic in templates. #}
+{% include '/modules/custom/cfr/templates/cfr_demo_table.html.twig' %}

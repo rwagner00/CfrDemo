@@ -1,0 +1,17 @@
+{{ attach_library('cfr/cfr-demo') }}
+
+<div class="cfr-demo-explanation">
+    <p>The instructions for the test call for obtaining data from <a href="https://feeds.citibikenyc.com/stations/stations.json">The NYC City Bike JSON feed</a>, and then filtering it for by the following rules:</p>
+    <ol>
+        <li>ID number 522</li>
+        <li>Only stations with the name "Forhsyth St & Broome St"</li>
+        <li>WITHOUT Entries from 1969-12-31</li>
+        <li>Only when available bikes are greater than 10</li>
+    </ol>
+    <p>As there is only one station with the name "Forsyth St. & Broome St, this combination of filters results in zero results. If these filters are taken as an "or" (so if the station number is 522, OR the name is "Forhsyth St & Broome St", OR there are 10+ bikes, AND the entry is not from 1969-12-31, usable results are obtained.</p>
+    <br>
+    <p>The following is the results using this rule. For the results as written, visit the alternate page, <a href="{{ url('cfr.demo_controller_alternate') }}">Here.</a></p>
+</div>
+
+{# Table used as partial to avoid code duplication or excess logic in templates. #}
+{% include '/modules/custom/cfr/templates/cfr_demo_table.html.twig' %}
