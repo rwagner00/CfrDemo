@@ -1,0 +1,26 @@
+<?php
+
+use Drupal\menu_link_content\Entity\MenuLinkContent;
+
+/**
+ * Implements hook_install().
+ */
+function cfr_install() {
+
+  // Create menu links to the primary and secondary demo
+  // pages in the main menu.
+  MenuLinkContent::create([
+    'title' => 'CFR Demo - Primary',
+    'link' => ['uri' => 'internal:/cfr/demo'],
+    'menu_name' => 'main',
+    'weight' => 10,
+  ])->save();
+
+  MenuLinkContent::create([
+    'title' => 'CFR Demo - Alternate',
+    'link' => ['uri' => 'internal:/cfr/alternate'],
+    'menu_name' => 'main',
+    'weight' => 12,
+  ])->save();
+
+}
